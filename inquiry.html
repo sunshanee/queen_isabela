@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isabela Province</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html" onclick="showPage('home')">
+      <img src="img/seal.png" alt="Isabela Province Logo" class="navbar-logo me-2"> Isabela ‎ <span> Province</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html" onclick="showPage('home')"><i class="fas fa-home me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html" onclick="showPage('about')"><i class="fas fa-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html" onclick="showPage('destinations')"><i class="fas fa-map-marker-alt me-1"></i>Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="festivals.html" onclick="showPage('festivals')"><i class="fas fa-star me-1"></i>Festivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="food.html" onclick="showPage('food')"><i class="fas fa-utensils me-1"></i>Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html" onclick="showPage('gallery')"><i class="fas fa-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="tips.html" onclick="showPage('tips')"><i class="fas fa-lightbulb me-1"></i>Travel Tips</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html" onclick="showPage('inquiry')"><i class="fas fa-envelope me-1"></i>Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/nav-footer.js"></script>
+  <script src="js/script.js"></script>
+
+
+<section id="inquiry" class="page-section">
+  <div class="sec-header">
+    <p class="sec-eyebrow">Get In Touch</p>
+    <h2 class="sec-title">Plan Your <em style="color:var(--gold);">Visit</em></h2>
+    <div class="sec-divider"></div>
+    <p class="sec-sub">Have questions or ready to plan your Isabela adventure? Fill out the form below.</p>
+  </div>
+  <div class="container">
+    <div class="inquiry-wrap">
+      <div class="success-msg" id="successMsg">
+        <i class="fas fa-check-circle d-block"></i>
+        <h5 style="font-family:'Playfair Display',serif;color:var(--green-dark);margin:10px 0 8px;">Inquiry Sent Successfully!</h5>
+        <p style="color:var(--text-muted);font-size:.9rem;">Thank you for your interest in Isabela! We'll get back to you within 1–2 business days.</p>
+      </div>
+      <form id="inquiryForm" novalidate>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Juan Dela Cruz">
+            <div class="invalid-feedback">Full name is required.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-control" id="emailAddr" placeholder="juan@example.com">
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Contact Number *</label>
+            <input type="text" class="form-control" id="contactNum" placeholder="09XXXXXXXXX">
+            <div class="invalid-feedback">Contact number must contain numbers only.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Selected Destination *</label>
+            <select class="form-select" id="selectedDest">
+              <option value="">— Choose a Destination —</option>
+              <option>Magat Dam & Reservoir</option>
+              <option>Disulap River System</option>
+              <option>Santa Victoria Cave</option>
+              <option>Palanan Wilderness</option>
+              <option>Tumauini Church</option>
+              <option>Ilagan Wildlife Sanctuary</option>
+              <option>Sierra Madre Mountains</option>
+              <option>Cagayan River</option>
+              <option>Jones Eco Park</option>
+              <option>Divilacan Coves</option>
+            </select>
+            <div class="invalid-feedback">Please select a destination.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Travel Date *</label>
+            <input type="date" class="form-control" id="travelDate">
+            <div class="invalid-feedback">Please select a travel date.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Number of Visitors *</label>
+            <input type="number" class="form-control" id="numVisitors" placeholder="e.g. 4" min="1">
+            <div class="invalid-feedback">Number of visitors must be at least 1.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label">Message *</label>
+            <textarea class="form-control" id="msgField" rows="4" placeholder="Tell us about your planned itinerary, special requirements, or any questions…"></textarea>
+            <div class="invalid-feedback">Message is required.</div>
+          </div>
+          <div class="col-12 mt-2">
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane me-2"></i>Submit Inquiry
+            </button>
+          </div>
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand"><i class="fas fa-leaf me-2"></i>Isabela <span>Province</span></div>
+        <p>The largest province in Luzon — home to majestic rivers, lush valleys, vibrant festivals, and warm Isabeleño hospitality. Explore. Discover. Experience.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Explore</h6>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('destinations')">Destinations</a>
+        <a href="#" onclick="showPage('festivals')">Festivals</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Discover</h6>
+        <a href="#" onclick="showPage('food')">Food</a>
+        <a href="#" onclick="showPage('gallery')">Gallery</a>
+        <a href="#" onclick="showPage('tips')">Travel Tips</a>
+        <a href="#" onclick="showPage('inquiry')">Inquiry</a>
+      </div>
+      <div class="col-lg-4">
+        <h6>Contact Tourism Office</h6>
+        <p><i class="fas fa-map-marker-alt me-2" style="color:var(--green-bright);"></i>Capitol Complex, Ilagan City, Isabela</p>
+        <p><i class="fas fa-phone me-2" style="color:var(--green-bright);"></i>(078) 323-0000</p>
+        <p><i class="fas fa-envelope me-2" style="color:var(--green-bright);"></i>tourism@isabela.gov.ph</p>
+        <p><i class="fas fa-globe me-2" style="color:var(--green-bright);"></i>www.isabela.gov.ph</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2025 Isabela Province Tourism Office. All rights reserved. | Designed for the People of Isabela</p>
+  </div>
+</footer>
+
+<!-- DESTINATION MODAL -->
+<div class="modal fade" id="destModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Destination Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success" onclick="showPage('inquiry');bootstrap.Modal.getInstance(document.getElementById('destModal')).hide()">
+          <i class="fas fa-envelope me-1"></i>Send Inquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close" onclick="closeLightbox()">✕</span>
+  <span class="lightbox-nav" id="lightbox-prev" onclick="lightboxNav(-1)">‹</span>
+  <div id="lightbox-img"></div>
+  <div id="lightbox-caption"></div>
+  <span class="lightbox-nav" id="lightbox-next" onclick="lightboxNav(1)">›</span>
+</div>
+
+</body>
+</html>

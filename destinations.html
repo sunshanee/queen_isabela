@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isabela Province</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+ 
+<body>
+
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html" onclick="showPage('home')">
+      <img src="img/seal.png" alt="Isabela Province Logo" class="navbar-logo me-2"> Isabela ‎ <span> Province</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html"><i class="fas fa-map-marker-alt me-1"></i>Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="festivals.html"><i class="fas fa-star me-1"></i>Festivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="food.html"><i class="fas fa-utensils me-1"></i>Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html"><i class="fas fa-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="tips.html"><i class="fas fa-lightbulb me-1"></i>Travel Tips</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html"><i class="fas fa-envelope me-1"></i>Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="js/nav-footer.js"></script>
+ <script src="js/script.js"></script>
+
+<section id="destinations" class="page-section">
+  <div class="sec-header">
+    <p class="sec-eyebrow">Places to See</p>
+    <h2 class="sec-title">Tourist <em>Destinations</em></h2>
+    <div class="sec-divider"></div>
+    <p class="sec-sub">From majestic dams to ancient caves and lush wildlife sanctuaries — explore the best of Isabela.</p>
+  </div>
+  <div class="container pb-5">
+    <div class="search-bar-wrap">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <input type="text" class="form-control" id="destSearch" placeholder=" Search by name, municipality, or category..." oninput="filterDestinations()">
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div id="filterBtns">
+            <div id="filterBtns">
+              <button class="filter-btn active" data-filter="All">All</button>
+              <button class="filter-btn" data-filter="Mountain">Mountain</button>
+              <button class="filter-btn" data-filter="River">River</button>
+              <button class="filter-btn" data-filter="Historical Site">Historical</button>
+              <button class="filter-btn" data-filter="Nature">Nature</button>
+              <button class="filter-btn" data-filter="Adventure">Adventure</button>
+              <button class="filter-btn" data-filter="Dam">Dam</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4" id="destGrid"></div>
+    <div class="no-results" id="noResults" style="display:none;">
+      <i class="fas fa-search-location"></i>
+      <p>No destinations found. Try a different search or filter.</p>
+    </div>
+  </div>
+
+  <div class="row g-4" id="destGrid">
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+          <img src="img/cave.png" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Nature</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Santa Victoria Cave</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Santa Victoria</p>
+          <p>One of Isabela's most fascinating geological wonders, Santa Victoria Cave features impressive stalactite and stalagmite formations…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱50</span>
+            <span><i class="fas fa-clock"></i>8AM–5PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(3)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/divheart.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Adventure</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Divilacan Coves &amp; Coastline</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Divilacan</p>
+          <p>Tucked along Isabela's remote Pacific coastline, Divilacan is a hidden gem featuring secluded coves, pristine beaches, dramatic ro…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱150–₱300</span>
+            <span><i class="fas fa-clock"></i>6AM–5PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(10)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/ilagansanct.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Nature</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Ilagan Wildlife Sanctuary</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Ilagan City</p>
+          <p>Located in the heart of Ilagan City, this wildlife sanctuary protects endemic and endangered Philippine wildlife, offering visitor…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱50–₱150</span>
+            <span><i class="fas fa-clock"></i>8AM–5PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(6)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/sierraa.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Mountain</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Sierra Madre Mountain Range</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Multiple Municipalities</p>
+          <p>The Sierra Madre Mountain Range, the longest mountain range in the Philippines, forms Isabela's eastern backbone. Offering challen…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>Varies by entry point</span>
+            <span><i class="fas fa-clock"></i>Varies by trail</span>
+          </div>
+          <button class="btn-green" onclick="openModal(7)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/cagayan.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">River</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Cagayan River (Isabela Section)</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Province-wide</p>
+          <p>The mighty Cagayan River — the longest river in the Philippines at 505 km — flows through Isabela. Its Isabela section offers rive…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱100–₱500 (activity-dependent)</span>
+            <span><i class="fas fa-clock"></i>5AM–6PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(8)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/jones.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Adventure</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Jones Eco Park</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Jones</p>
+          <p>A community-managed eco-park in the municipality of Jones, featuring zip lines, river swimming, forest trails, and picnic grounds …</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱30–₱80</span>
+            <span><i class="fas fa-clock"></i>7AM–5PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(9)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/tomauinichurch.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Historical Site</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Tumauini Church (Saint Dominic Church)</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Tumauini</p>
+          <p>A UNESCO World Heritage Site tentative list candidate, the St. Dominic de Guzmán Parish Church in Tumauini is one of the finest ex…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>Free (donation appreciated)</span>
+            <span><i class="fas fa-clock"></i>6AM–6PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(5)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+           <img src="img/magat.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">Dam</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Magat Dam &amp; Reservoir</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>Ramon / Santiago City</p>
+          <p>One of the largest irrigation dams in Southeast Asia, the Magat Dam is an iconic landmark of Isabela. It spans the Magat River, a …</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>Free</span>
+            <span><i class="fas fa-clock"></i>Open 24 hrs (boat rides 6AM–5PM)</span>
+          </div>
+          <button class="btn-green" onclick="openModal(1)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4">
+      <div class="dest-card">
+        <div class="dest-card-img">
+            <img src="img/disulap.jpg" class="img-fluid rounded shadow-sm mb-3">
+          <span class="dest-badge">River</span>
+        </div>
+        <div class="dest-card-body">
+          <h5>Disulap River System</h5>
+          <p class="dest-loc"><i class="fas fa-map-marker-alt"></i>San Mariano</p>
+          <p>A pristine river system in the heart of the Sierra Madre, the Disulap River in San Mariano is a haven for nature lovers. Known for…</p>
+          <div class="dest-meta">
+            <span><i class="fas fa-ticket-alt"></i>₱100–₱200</span>
+            <span><i class="fas fa-clock"></i>7AM–5PM</span>
+          </div>
+          <button class="btn-green" onclick="openModal(2)"><i class="fas fa-eye me-1"></i>View Details</button>
+        </div>
+      </div>
+    </div>
+
+ 
+  </div>
+    <div class="no-results" id="noResults" style="display:none;">
+      <i class="fas fa-search-location"></i>
+      <p>No destinations found. Try a different search or filter.</p>
+    </div>
+  </div>
+</section>
+
+<br>    
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand"><i class="fas fa-leaf me-2"></i>Isabela <span>Province</span></div>
+        <p>The largest province in Luzon — home to majestic rivers, lush valleys, vibrant festivals, and warm Isabeleño hospitality. Explore. Discover. Experience.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Explore</h6>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('destinations')">Destinations</a>
+        <a href="#" onclick="showPage('festivals')">Festivals</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Discover</h6>
+        <a href="#" onclick="showPage('food')">Food</a>
+        <a href="#" onclick="showPage('gallery')">Gallery</a>
+        <a href="#" onclick="showPage('tips')">Travel Tips</a>
+        <a href="#" onclick="showPage('inquiry')">Inquiry</a>
+      </div>
+      <div class="col-lg-4">
+        <h6>Contact Tourism Office</h6>
+        <p><i class="fas fa-map-marker-alt me-2" style="color:var(--green-bright);"></i>Capitol Complex, Ilagan City, Isabela</p>
+        <p><i class="fas fa-phone me-2" style="color:var(--green-bright);"></i>(078) 323-0000</p>
+        <p><i class="fas fa-envelope me-2" style="color:var(--green-bright);"></i>tourism@isabela.gov.ph</p>
+        <p><i class="fas fa-globe me-2" style="color:var(--green-bright);"></i>www.isabela.gov.ph</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2025 Isabela Province Tourism Office. All rights reserved. | Designed for the People of Isabela</p>
+  </div>
+</footer>
+
+<!-- DESTINATION MODAL -->
+<div class="modal fade" id="destModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Destination Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Insert your modal body here -->
+      <div class="modal-body" id="modalBody">
+        <!-- Image and text will be injected here -->
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success" onclick="showPage('inquiry');bootstrap.Modal.getInstance(document.getElementById('destModal')).hide()">
+          <i class="fas fa-envelope me-1"></i>Send Inquiry
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close" onclick="closeLightbox()">✕</span>
+  <span class="lightbox-nav" id="lightbox-prev" onclick="lightboxNav(-1)">‹</span>
+  <div id="lightbox-img"></div>
+  <div id="lightbox-caption"></div>
+  <span class="lightbox-nav" id="lightbox-next" onclick="lightboxNav(1)">›</span>
+</div>
+
+</body>
+</html>
+

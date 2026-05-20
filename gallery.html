@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isabela Province</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html" onclick="showPage('home')">
+      <img src="img/seal.png" alt="Isabela Province Logo" class="navbar-logo me-2"> Isabela ‎ <span> Province</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html" onclick="showPage('home')"><i class="fas fa-home me-1"></i>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html" onclick="showPage('about')"><i class="fas fa-info-circle me-1"></i>About</a></li>
+        <li class="nav-item"><a class="nav-link" href="destinations.html" onclick="showPage('destinations')"><i class="fas fa-map-marker-alt me-1"></i>Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" href="festivals.html" onclick="showPage('festivals')"><i class="fas fa-star me-1"></i>Festivals</a></li>
+        <li class="nav-item"><a class="nav-link" href="food.html" onclick="showPage('food')"><i class="fas fa-utensils me-1"></i>Food</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html" onclick="showPage('gallery')"><i class="fas fa-images me-1"></i>Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="tips.html" onclick="showPage('tips')"><i class="fas fa-lightbulb me-1"></i>Travel Tips</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html" onclick="showPage('inquiry')"><i class="fas fa-envelope me-1"></i>Inquiry</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/nav-footer.js"></script>
+  <script src="js/script.js"></script>
+
+<section id="gallery" class="page-section active">
+  <div class="sec-header">
+    <p class="sec-eyebrow">Visual Journey</p>
+    <h2 class="sec-title">Photo <em style="color:var(--gold);">Gallery</em></h2>
+    <div class="sec-divider"></div>
+    <p class="sec-sub">A visual feast of Isabela's landscapes, culture, and people. Click any photo to view full size.</p>
+  </div>
+  <div class="container">
+    <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" onclick="openLightbox(0)">
+      <div class="gallery-item-inner" style="background:#1a4d2e;">
+         <img src="img/1.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(1)">
+      <div class="gallery-item-inner" style="background:#2d7a4f;">
+         <img src="img/8.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(2)">
+      <div class="gallery-item-inner" style="background:#3ea76a;">
+         <img src="img/3.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(3)">
+      <div class="gallery-item-inner" style="background:#4caf73;">
+         <img src="img/4.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(4)">
+      <div class="gallery-item-inner" style="background:#1e6b42;">
+         <img src="img/5.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(5)">
+      <div class="gallery-item-inner" style="background:#256b3b;">
+         <img src="img/6.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(6)">
+      <div class="gallery-item-inner" style="background:#35885a;">
+         <img src="img/7.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(7)">
+      <div class="gallery-item-inner" style="background:#2a6b44;">
+         <img src="img/2.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(8)">
+      <div class="gallery-item-inner" style="background:#1d5c35;">
+         <img src="img/9.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(9)">
+      <div class="gallery-item-inner" style="background:#3d9960;">
+         <img src="img/10.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(10)">
+      <div class="gallery-item-inner" style="background:#1a4d2e;">
+         <img src="img/11.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(11)">
+      <div class="gallery-item-inner" style="background:#2d7a4f;">
+         <img src="img/12.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(12)">
+      <div class="gallery-item-inner" style="background:#3ea76a;">
+         <img src="img/13.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(13)">
+      <div class="gallery-item-inner" style="background:#4caf73;">
+         <img src="img/14.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(14)">
+      <div class="gallery-item-inner" style="background:#1e6b42;">
+         <img src="img/15.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(15)">
+      <div class="gallery-item-inner" style="background:#256b3b;">
+         <img src="img/16.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(16)">
+      <div class="gallery-item-inner" style="background:#35885a;">
+         <img src="img/17.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(17)">
+      <div class="gallery-item-inner" style="background:#2a6b44;">
+         <img src="img/18.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(18)">
+      <div class="gallery-item-inner" style="background:#1a4d2e;">
+         <img src="img/19.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(19)">
+      <div class="gallery-item-inner" style="background:#1a4d2e;">
+         <img src="img/20.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(20)">
+      <div class="gallery-item-inner" style="background:#1a4d2e;">
+         <img src="img/21.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(21)">
+      <div class="gallery-item-inner" style="background:#2d7a4f;">
+         <img src="img/22.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(22)">
+      <div class="gallery-item-inner" style="background:#3ea76a;">
+         <img src="img/23.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(23)">
+      <div class="gallery-item-inner" style="background:#4caf73;">
+         <img src="img/24.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(24)">
+      <div class="gallery-item-inner" style="background:#1e6b42;">
+         <img src="img/25.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(25)">
+      <div class="gallery-item-inner" style="background:#256b3b;">
+         <img src="img/26.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(26)">
+      <div class="gallery-item-inner" style="background:#35885a;">
+         <img src="img/27.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(27)">
+      <div class="gallery-item-inner" style="background:#2a6b44;">
+         <img src="img/28.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(28)">
+      <div class="gallery-item-inner" style="background:#1d5c35;">
+         <img src="img/29.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  
+    <div class="gallery-item" onclick="openLightbox(29)">
+      <div class="gallery-item-inner" style="background:#3d9960;">
+         <img src="img/30.jpg" class="img-fluid rounded shadow-sm mb-3">
+      </div>
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="brand"><i class="fas fa-leaf me-2"></i>Isabela <span>Province</span></div>
+        <p>The largest province in Luzon — home to majestic rivers, lush valleys, vibrant festivals, and warm Isabeleño hospitality. Explore. Discover. Experience.</p>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Explore</h6>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('destinations')">Destinations</a>
+        <a href="#" onclick="showPage('festivals')">Festivals</a>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Discover</h6>
+        <a href="#" onclick="showPage('food')">Food</a>
+        <a href="#" onclick="showPage('gallery')">Gallery</a>
+        <a href="#" onclick="showPage('tips')">Travel Tips</a>
+        <a href="#" onclick="showPage('inquiry')">Inquiry</a>
+      </div>
+      <div class="col-lg-4">
+        <h6>Contact Tourism Office</h6>
+        <p><i class="fas fa-map-marker-alt me-2" style="color:var(--green-bright);"></i>Capitol Complex, Ilagan City, Isabela</p>
+        <p><i class="fas fa-phone me-2" style="color:var(--green-bright);"></i>(078) 323-0000</p>
+        <p><i class="fas fa-envelope me-2" style="color:var(--green-bright);"></i>tourism@isabela.gov.ph</p>
+        <p><i class="fas fa-globe me-2" style="color:var(--green-bright);"></i>www.isabela.gov.ph</p>
+      </div>
+    </div>
+    <hr>
+    <p class="copy">© 2025 Isabela Province Tourism Office. All rights reserved. | Designed for the People of Isabela</p>
+  </div>
+</footer>
+
+<!-- DESTINATION MODAL -->
+<div class="modal fade" id="destModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalTitle">Destination Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-success" onclick="showPage('inquiry');bootstrap.Modal.getInstance(document.getElementById('destModal')).hide()">
+          <i class="fas fa-envelope me-1"></i>Send Inquiry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close" onclick="closeLightbox()">✕</span>
+  <span class="lightbox-nav" id="lightbox-prev" onclick="lightboxNav(-1)">‹</span>
+  <div id="lightbox-img"></div>
+  <div id="lightbox-caption"></div>
+  <span class="lightbox-nav" id="lightbox-next" onclick="lightboxNav(1)">›</span>
+</div>
+
+</body>
+</html>
