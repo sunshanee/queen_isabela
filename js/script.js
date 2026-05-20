@@ -1,7 +1,5 @@
-// GLOBAL STATE
 let currentFilter = "All";
 
-// ===== INITIALIZE =====
 document.addEventListener("DOMContentLoaded", () => {
   // Search input listener
   const searchInput = document.getElementById("destSearch");
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// FILTER DESTINATIONS 
 function filterDestinations() {
   const query = document.getElementById("destSearch").value.toLowerCase();
   const cards = document.querySelectorAll(".dest-card");
@@ -39,23 +36,19 @@ function filterDestinations() {
     }
   });
 
-  // Show "no results" message if nothing matches
   document.getElementById("noResults").style.display = visibleCount === 0 ? "block" : "none";
 }
 
-// SET FILTER 
+
 function setFilter(filter, btn) {
   currentFilter = filter;
 
-  // Update active button styling
   document.querySelectorAll("#filterBtns .filter-btn").forEach(b => b.classList.remove("active"));
   btn.classList.add("active");
 
-  // Re-run search with new filter
   filterDestinations();
 }
 
-// MODAL HANDLING 
 function openModal(id) {
   const modal = new bootstrap.Modal(document.getElementById("destModal"));
 
@@ -77,11 +70,10 @@ function openModal(id) {
   const modalBody = document.getElementById('modalBody');
   const modalTitle = document.getElementById('modalTitle');
 
-  // Clear previous content
   modalBody.innerHTML = '';
 
   switch(id) {
-    case 1: // Magat Dam
+    case 1: 
       modalTitle.textContent = "Magat Dam & Reservoir";
       modalBody.innerHTML = `
         <img src="img/magat.jpg" class="img-fluid rounded mb-3">
@@ -89,7 +81,7 @@ function openModal(id) {
       `;
       break;
 
-    case 2: // Disulap River
+    case 2: // 
       modalTitle.textContent = "Disulap River System";
       modalBody.innerHTML = `
         <img src="img/disulap.jpg" class="img-fluid rounded mb-3">
@@ -97,7 +89,7 @@ function openModal(id) {
       `;
       break;
 
-    case 3: // Santa Victoria Cave
+    case 3: // 
       modalTitle.textContent = "Santa Victoria Cave";
       modalBody.innerHTML = `
         <img src="img/cave.png" class="img-fluid rounded mb-3">
@@ -105,7 +97,7 @@ function openModal(id) {
       `;
       break;
 
-    case 5: // Tumauini Church
+    case 5: 
       modalTitle.textContent = "Tumauini Church (Saint Dominic Church)";
       modalBody.innerHTML = `
         <img src="img/tomauinichurch.jpg" class="img-fluid rounded mb-3">
@@ -113,7 +105,7 @@ function openModal(id) {
       `;
       break;
 
-    case 6: // Ilagan Wildlife Sanctuary
+    case 6:
       modalTitle.textContent = "Ilagan Wildlife Sanctuary";
       modalBody.innerHTML = `
         <img src="img/ilagansanct.jpg" class="img-fluid rounded mb-3">
@@ -121,7 +113,7 @@ function openModal(id) {
       `;
       break;
 
-    case 7: // Sierra Madre
+    case 7: 
       modalTitle.textContent = "Sierra Madre Mountain Range";
       modalBody.innerHTML = `
         <img src="img/sierraa.jpg" class="img-fluid rounded mb-3">
@@ -129,7 +121,7 @@ function openModal(id) {
       `;
       break;
 
-    case 8: // Cagayan River
+    case 8:
       modalTitle.textContent = "Cagayan River (Isabela Section)";
       modalBody.innerHTML = `
         <img src="img/cagayan.jpg" class="img-fluid rounded mb-3">
@@ -137,7 +129,7 @@ function openModal(id) {
       `;
       break;
 
-    case 9: // Jones Eco Park
+    case 9: 
       modalTitle.textContent = "Jones Eco Park";
       modalBody.innerHTML = `
         <img src="img/jones.jpg" class="img-fluid rounded mb-3">
@@ -145,7 +137,7 @@ function openModal(id) {
       `;
       break;
 
-    case 10: // Divilacan Coves
+    case 10:
       modalTitle.textContent = "Divilacan Coves & Coastline";
       modalBody.innerHTML = `
         <img src="img/divheart.jpg" class="img-fluid rounded mb-3">
@@ -154,13 +146,11 @@ function openModal(id) {
       break;
   }
 
-  // Show the modal
   const modal = new bootstrap.Modal(document.getElementById('destModal'));
   modal.show();
 }
 
 
-// LIGHTBOX 
 let currentIndex = 0;
 let galleryItems = [];
 
